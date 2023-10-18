@@ -103,7 +103,8 @@ class GroupByOperator : public Operator {
                 break;
             }
             case GroupByType::SUM: {
-                if (secondPhase) {
+                if (secondPhase) {    //zhangqizhi
+                //if (true) {
                     unsigned int sum_res_index = output["SEL"].getIndex() * CR_P.PARTY_REPLICATION;
                     // this is the second phase of aggregation decomposition
                     output.shareTable.numCols *= CR_P.PARTY_REPLICATION;

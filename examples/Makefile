@@ -8,10 +8,10 @@ RELATIONAL= $(SRC)/relational.c
 
 all:	comorbidity join-distinct
 
-comorbidity:	comorbidity.c $(PRIMITIVES) $(RELATIONAL)
+comorbidity:	./c_api/comorbidity.c $(PRIMITIVES) $(RELATIONAL)
 			$(MPI) $(CFLAGS) -o comorbidity comorbidity.c $(PRIMITIVES) $(RELATIONAL)
 
-join-distinct:	join_distinct.c $(PRIMITIVES) $(RELATIONAL)
+join-distinct:	./c_api/join_distinct.c $(PRIMITIVES) $(RELATIONAL)
 			$(MPI) $(CFLAGS) -o join-distinct join_distinct.c $(PRIMITIVES) $(RELATIONAL)
 
 clean:

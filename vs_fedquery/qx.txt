@@ -1,0 +1,5 @@
+SELECT R.ak, sum(S.value)
+FROM R join S
+on R.id = S.id
+where R.ak<=S.bk
+GROUP BY R.ak

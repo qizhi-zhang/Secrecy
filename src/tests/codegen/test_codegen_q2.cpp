@@ -91,7 +91,7 @@ void executeAndTestQuery(int argc, char *argv[]) {
     auto res_open = query->root->output.openRelation();
     int out_size = query->root->output.getSize();
     auto res_open_ptr = res_open.get();
-
+    std::cout<<"out_size="<<out_size<<std::endl;
     std::vector<std::shared_ptr<Relation>> schema = db->getRelations();
     const int r_id = (*schema[0])["R.[id]"].getIndex();
     const int r_ak = (*schema[0])["R.[ak]"].getIndex();
