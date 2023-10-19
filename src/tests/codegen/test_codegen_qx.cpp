@@ -140,7 +140,7 @@ void executeAndTestQuery(int argc, char *argv[]) {
     // Populate relations with random data
     std::vector<DataTable> r_data;
     
-    populateRandDB(db, r_data);
+    populateRandDB(db, r_data, class_num);
     std::cout<<"r_data.size()="<<r_data.size()<<std::endl;
 
     // for (int i=0; i<rows[0]; i++)

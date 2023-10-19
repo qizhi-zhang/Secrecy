@@ -37,13 +37,13 @@ static void createDBandQuery(int *rows, int rel_no,
 }
 
 // Populates tables in the given database with random secret-shared data
-static void populateRandDB(std::shared_ptr<Database> db, std::vector<DataTable> &r_data) {
+static void populateRandDB(std::shared_ptr<Database> db, std::vector<DataTable> &r_data, int max_num=100) {
     std::vector<std::shared_ptr<Relation>> relations = db->getRelations();
     int rel_no = relations.size();
     r_data.resize(rel_no);
     for (int i=0; i<rel_no; i++) {
         // Generate random data
-        r_data[i] = getRandomData(relations[i]->getSize(), relations[i]->colsNum());
+        r_data[i] = getRandomData(relations[i]->getSize(), relations[i]->colsNum(), max_num);
         // Secret share random data and populate relations
         populateTestRelation(relations[i], r_data[i]);
     }

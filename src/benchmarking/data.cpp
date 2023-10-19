@@ -5,11 +5,11 @@
 #include <iostream>
 #include <fstream>
 
-Data **getRandomData(int rows, int cols) {
+Data **getRandomData(int rows, int cols, int max) {
     Data **data = allocateContent<Data>(rows, cols, 1);
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
-            data[i][j] = random() % 100;
+            data[i][j] = random() % max;
         }
     }
     return data;

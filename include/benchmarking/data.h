@@ -7,7 +7,7 @@
 // TODO: add function that gets random data by number of rows and
 //  list of columns names so it counts for "COL" and "[COL]"
 
-Data **getRandomData(int rows, int cols);
+Data **getRandomData(int rows, int cols, int max=100);
 
 /**
  * Read 2D data from file and returns a 2D array accessible as [row_index][col_index].
