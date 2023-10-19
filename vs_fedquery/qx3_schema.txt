@@ -1,0 +1,4 @@
+# B, B, B
+a(phone, age, income)
+# B, B, B
+b(phone, price, buy_flag)

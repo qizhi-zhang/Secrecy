@@ -1,0 +1,11 @@
+Select 
+a.age, 
+max(b.price) 
+from 
+a join b 
+on
+a.phone=b.phone 
+where  
+a.income<=b.price  
+group 
+by a.age

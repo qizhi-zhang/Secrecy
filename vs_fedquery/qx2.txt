@@ -1,0 +1,9 @@
+Select 
+max(b.price) 
+from a join b 
+on
+a.phone=b.phone 
+where  
+b.buy_flag=1 
+or 
+a.income>b.price  

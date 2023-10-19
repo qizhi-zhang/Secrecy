@@ -120,8 +120,8 @@ void executeAndTestQuery(int argc, char *argv[]) {
     int class_num = std::stoi(argv[3]);
     // std::string query_file = "../examples/queries/qx.txt", // Query file
     // schema_file = "../examples/schemas/qx_schema.txt"; // Schema file
-    std::string query_file = "../vs_fedquery/qx4m.txt", // Query file
-    schema_file = "../vs_fedquery/qx4_schema.txt"; // Schema file
+    std::string query_file = "../vs_fedquery/qx1.txt", // Query file
+    schema_file = "../vs_fedquery/qx1_schema.txt"; // Schema file
     const int rank = get_rank();
     
     std::cout<<"rank="<<rank<<std::endl;
